@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script><title>ICT Drill 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: linear-gradient(135deg, #e9eef5, #cbd7e5);
+            color: #243247;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: min(100%, 380px);
+            padding: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.65);
+            border-radius: 16px;
+            background: rgba(120, 128, 140, 0.22);
+            box-shadow: 0 12px 30px rgba(32, 48, 68, 0.16),
+                        0 2px 8px rgba(32, 48, 68, 0.10);
+            backdrop-filter: blur(8px);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #c3ccd8;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #243247;
+            font: inherit;
+        }
+
+        input:focus {
+            outline: 2px solid #6483a8;
+            outline-offset: 2px;
+        }
+
+        button {
+            padding: 11px 20px;
+            border: 0;
+            border-radius: 8px;
+            background: #345779;
+            color: white;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(32, 48, 68, 0.18);
+        }
+
+        button:hover {
+            background: #284764;
+        }
+
+        #output {
+            overflow-wrap: anywhere;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Dance Club</h1>
+        <div id="Fullname">
+        <input type="text" placeholder="Gavin" id="Fname"> <!--This is to call the first first name "Fname"-->
+        <br><br>
+        <input type="text" placeholder="Ruiz" id="Lname"> <!--This is to call the last first name "Lname"-->
+        </div>
+        <br><br>
+        <button type="button" py-click="new_member">Add Member</button> <!--I use the py-click "new_guy"-->
+        <p id="output"></p> <!--This shows the output from "new_list"-->
+
+    </form>
+    <script type="py" src="main.py"></script> <!--connects the python to the HTML file-->
+    
+</body>
+</html>
